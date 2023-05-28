@@ -5,7 +5,7 @@ interface ErrorProps {
 const ErrorPage = ({ error }: ErrorProps) => {
   return (
     <>
-      <div>network error</div>
+      <div style={{color: 'red'}}>network error</div>
       <span>{error}</span>
     </>
   );

@@ -2,9 +2,11 @@ import Cart from "../../components/Cart/Cart";
 // import { useContext } from "react";
 // import { ICart } from "../../models";
 import useCarts from "../../hooks/cardsFetch";
+import Loading from "../../components/Loader/Loader";
+import ErrorPage from "../../components/ErrorPage/ErrorPage";
 
 const CardPage = () => {
-  const { carts } = useCarts();
+  const { carts, loading, error } = useCarts();
   return (
     <>
       <div
@@ -29,6 +31,8 @@ const CardPage = () => {
           marginBottom: "20px",
         }}
       >
+        {loading && <Loading/>}
+        {error && <ErrorPage error={error}/>}
         <Cart cart={carts} />
       </div>
     </>

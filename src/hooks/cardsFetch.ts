@@ -7,10 +7,6 @@ const useCarts = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-//   function addProduct (product: ICart) {
-//     setProducts(prev=> [...prev, product])
-//   }
-
   async function fetchCarts() {
     try {
       setLoading(true);

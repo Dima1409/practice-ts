@@ -8,12 +8,13 @@ import CardPage from "./pages/carts/CartsPage";
 function App() {
   return (
     <>
-      <Navigation />
       <Routes>
-        <Route path="/" element={<MainPage />}></Route>
-        <Route path="/products" element={<ProductPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/carts" element={<CardPage />} />
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<MainPage />}/>
+          <Route path="products" element={<ProductPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="carts" element={<CardPage />} />
+        </Route>
       </Routes>
     </>
   );
